@@ -4,7 +4,7 @@ import {IParallaxScrollConfig} from 'ng2-parallaxscroll';
 @Component({
   selector: 'app-home-page-header',
   templateUrl: './home-page-header.component.html',
-  styleUrls: ['./home-page-header.component.css']
+  styleUrls: ['./home-page-header.component.scss']
 })
 export class HomePageHeaderComponent implements OnInit {
   parallaxConfig: IParallaxScrollConfig;
