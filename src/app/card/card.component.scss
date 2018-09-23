@@ -1,12 +1,14 @@
 .card {
+  display: inline-flex;
   text-align: center;
+  justify-content: space-around;
   border: transparent;
   h1 {
     font-size: 2rem;
   }
   .card-text {
     line-height: 2.5rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   i {
     font-size: 3rem;

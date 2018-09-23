@@ -1,8 +1,33 @@
-:host{
+:host {
+  font-size: 4rem;
   display: block;
   width: 100%;
   height: 88vh;
   background: url("/assets/bg.jpg") right;
+}
 
+.first-fade {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  animation-name: fadeIn;
+  animation-duration: 10s;
+}
+
+.two-fade {
+  position: absolute;
+  top: 40%;
+  left: 8%;
+  animation-name: fadeIn;
+  animation-duration: 10s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
