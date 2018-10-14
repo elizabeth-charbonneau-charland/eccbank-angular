@@ -1,16 +1,39 @@
+@import "../../variables";
+
 .card {
-  display: inline-flex;
+  font-family: 'Quicksand';
   text-align: center;
-  justify-content: space-around;
-  border: transparent;
+  margin: 20px;
+  border: 2px solid transparent;
+
+  &:hover {
+    transition: 0.5s;
+    background-color: ghostwhite;
+    border-color: $primary-color;
+    hr {
+      transform: scale(2);
+    }
+  }
+
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
+
   .card-text {
-    line-height: 2.5rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    line-height: 1.9rem;
   }
+
   i {
+    color: gray;
+    padding: 10px;
     font-size: 3rem;
+  }
+
+  hr {
+    width: 15%;
+    border: 1px solid $primary-color;
+    transition: transform 300ms ease-out;
+    border-radius: 5px;
   }
 }

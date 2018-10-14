@@ -1,13 +1,13 @@
 <!--AJOUTER UNE PROGRESS BAR MAYBE ?-->
 
-<form>
+<form (submit)="onSubmit()">
   <div class="form-group">
     <label for="email">Adresse courriel</label>
-    <input type="email" class="form-control" id="email"  placeholder="Adresse Courriel">
+    <input name="email" type="email" class="form-control" id="email" [(ngModel)]="email" placeholder="Adresse Courriel">
   </div>
   <div class="form-group">
     <label for="password">Mot de passe</label>
-    <input type="password" class="form-control" id="password" placeholder="Mot de passe">
+    <input name="password" type="password" class="form-control" id="password" [(ngModel)]="password" placeholder="Mot de passe">
   </div>
   <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
