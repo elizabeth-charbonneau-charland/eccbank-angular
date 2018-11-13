@@ -6,7 +6,6 @@ import {HomePageComponent} from './home-page/home-page.component';
 import {AppRoutingModule} from './app-routing.module';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {HomePageHeaderComponent} from './home-page-header/home-page-header.component';
-import {ParallaxScrollModule} from 'ng2-parallaxscroll';
 import {CardComponent} from './card/card.component';
 import {FooterComponent} from './footer/footer.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
@@ -15,7 +14,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatStepperModule} from '@angular/material';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
-import { PhotoCardComponent } from './photo-card/photo-card.component';
+import { CarouselDirective } from './carousel.directive';
+import { SlideDirective } from './slide.directive';
+import { ContactComponent } from './contact/contact.component';
+import { ProductComponent } from './product/product.component';
+import { AccountComponent } from './account/account.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { AccountListComponent } from './account/account-list/account-list.component';
+import { MoneyTransferComponent } from './money-transfer/money-transfer.component';
 
 @NgModule({
     declarations: [
@@ -27,7 +33,14 @@ import { PhotoCardComponent } from './photo-card/photo-card.component';
         FooterComponent,
         SignUpComponent,
         SignInComponent,
-        PhotoCardComponent
+        CarouselDirective,
+        SlideDirective,
+        ContactComponent,
+        ProductComponent,
+        AccountComponent,
+        CreateAccountComponent,
+        AccountListComponent,
+        MoneyTransferComponent
     ],
     imports: [
         BrowserModule,

@@ -1,0 +1,21 @@
+@import "../../variables";
+
+.single-account {
+  border: 1px solid gray;
+
+  .first-line {
+    font-weight: 600;
+    i {
+      font-size: $size-4;
+      padding: 5px;
+    }
+  }
+
+  .account-name {
+    margin-left: 40px;
+  }
+
+  .account-money {
+    float: right;
+  }
+}

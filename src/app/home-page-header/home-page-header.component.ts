@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {IParallaxScrollConfig} from 'ng2-parallaxscroll';
+
 
 @Component({
   selector: 'app-home-page-header',
@@ -7,15 +7,10 @@ import {IParallaxScrollConfig} from 'ng2-parallaxscroll';
   styleUrls: ['./home-page-header.component.scss']
 })
 export class HomePageHeaderComponent implements OnInit {
-  parallaxConfig: IParallaxScrollConfig;
 
   constructor() { }
 
   ngOnInit() {
-    this.parallaxConfig = {
-      axis: 'Y',
-     speed:-.2,
-    }
   }
 
 }

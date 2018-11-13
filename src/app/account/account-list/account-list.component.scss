@@ -1,0 +1,20 @@
+@import "../../../variables";
+
+nav {
+  margin-top: 50px;
+  margin-left: 20%;
+  margin-right: 20%;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    font-size: $size-4;
+  }
+}
+
+.account-container {
+  border: 2px solid gray;
+  max-width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+}

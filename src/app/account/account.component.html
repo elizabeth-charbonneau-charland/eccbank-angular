@@ -1,0 +1,16 @@
+<div class="single-account">
+    <span class="first-line">
+        <ng-container [ngSwitch]="account.type">
+            <i *ngSwitchCase="'checking'" class="fas fa-wallet"></i>
+            <i *ngSwitchCase="'savings'" class="fas fa-piggy-bank"></i>
+        </ng-container>
+    </span>
+    <span>{{ account.id }}</span>
+    <br>
+    <span class="account-name">
+        {{ account.name }}
+    </span>
+    <span class="account-money">
+        {{account.money }}
+    </span>
+</div>

@@ -1,33 +1,41 @@
-:host {
-  font-size: 4rem;
-  display: block;
+@import "../../variables";
+@import "~bulma/sass/utilities/mixins";
+
+.header {
+  top:0;
   width: 100%;
-  height: 88vh;
-  background: url("/assets/bg.jpg") right;
-}
-
-.first-fade {
   position: absolute;
-  top: 30%;
-  left: 5%;
-  animation-name: fadeIn;
-  animation-duration: 10s;
+  height: inherit;
+  z-index: -1;
+  background: url("../../assets/welcome.png");
+  background-size: cover;
+
+  .header-body {
+    h1 {
+      left: 15%;
+      font-size: 7.5rem;
+      position: absolute;
+      top:35%;
+      color: white;
+    }
+
+    h2 {
+      left: 25%;
+      font-size: 1.3rem;
+      position: absolute;
+      top:52%;
+      color: white;
+    }
+
+    img {
+      position: absolute;
+      top:35%;
+      right: 5%;
+      width: 700px;
+      height: 750px;
+    }
+  }
 }
 
-.two-fade {
-  position: absolute;
-  top: 40%;
-  left: 8%;
-  animation-name: fadeIn;
-  animation-duration: 10s;
-}
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 

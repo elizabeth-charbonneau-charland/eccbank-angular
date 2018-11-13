@@ -1,22 +1,81 @@
 <app-home-page-header></app-home-page-header>
 
-<div class="card-container">
-<app-card icon="mobile" title="Services bancaires efficaces">Vous pouvez gérer vos affaires bancaires comme bon vous semble, que ce soit en ligne, en succursale et au
-  téléphone</app-card>
+<!--SECTION CARDS-->
+<section class="section card-section">
+    <div class="container">
+        <h1 class="has-text-centered">Nos avantages ?</h1>
+        <div class="columns is-desktop">
+            <div class="column is-center single-card">
+                <app-card icon="mobile-alt" title="Services mobiles">
+                    Accédez à vos comptes sur n’importe quel appareil.
+                </app-card>
+            </div>
+            <div class="column single-card">
+                <app-card icon="credit-card" title="Points Ecc">
+                    Optenez des points Ecc avec notre nouvelle carte
+                </app-card>
+            </div>
+            <div class="column single-card">
+                <app-card icon="map-marker-alt" title="Accès gratuit">
+                    Accès gratuit à plus de 3 500 guichets automatiques
+                </app-card>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-<app-card icon="money-check" title="Accès à plus de 3 500 guichets">Payer pour accéder à votre argent est injuste. Vous pouvez retirer votre argent sans frais partout au
-  pays avec nos guichets</app-card>
+<section class="section advantage-section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-two-fifths ">
+                <img src="../../assets/happy.svg" alt="">
+            </div>
 
-<app-card icon="home" title="Accès à plus de 3 500 guichets">Payer pour accéder à votre argent est injuste. Vous pouvez retirer votre argent sans frais partout au
-  pays avec nos guichets</app-card>
+            <div class="column">
+                <h1>Pourquoi devenir client ?</h1>
+                <p>En tant que Client Tangerine, vous bénéficiez de
+                    taux d’intérêt avantageux, évitez les frais injustes et
+                    profitez d’options bancaires qui vous aident à atteindre vos
+                    objectifs financiers. Devenez Client aujourd’hui et constatez les
+                    avantages de changer d’ère bancaire.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="reviews section " appCarousel #carousel="appCarousel">
+    <div class="container has-text-centered">
+    <span class="chevron-left">
+        <i class="fas fa-chevron-left" (click)="carousel.showNext()">
+        </i>
+    </span>
+
+        <div appSlide>
+            <i class="fas fa-quote-left"></i>
+            <p>«Je suis très satisfaite de votre service. Vous êtes une équipe exceptionnelle. Merci infiniment!»</p>
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                    class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <h2>Andrew</h2>
+        </div>
+
+        <div appSlide>
+            <i class="fas fa-quote-left"></i>
+            <p> Depuis plus de cinq ans, nous avons le plaisir de faire affaires avec EccBank. Le service est courtois,
+                rapide et on sait répondre à tous nos besoins!</p>
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                    class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <h2>Andrew</h2>
+        </div>
+
+        <span class="chevron-right">
+        <i class="fas fa-chevron-right" (click)="carousel.showNext()">
+        </i>
+    </span>
+    </div>
 </div>
 
-<app-photo-card picture="../assets/team1.jpg" title="Andrew" subtitle="compton"></app-photo-card>
-<app-photo-card picture="../assets/team2.jpg" title="Andrew" subtitle="compton"></app-photo-card>
-<app-photo-card picture="../assets/team3.jpg" title="Andrew" subtitle="compton"></app-photo-card>
-<app-photo-card picture="../assets/team4.jpg" title="Andrew" subtitle="compton"></app-photo-card>
 
-
-<app-footer></app-footer>
 

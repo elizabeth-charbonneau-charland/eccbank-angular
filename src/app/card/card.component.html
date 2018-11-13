@@ -1,11 +1,14 @@
-
-<div class="card ">
-  <div class="card-body">
-    <i *ngIf="icon" class="fas fa-{{ icon }}"></i>
-    <h1>{{ title }}</h1>
-    <hr>
-    <div class="card-text"><ng-content></ng-content></div>
-  </div>
+<!--Mon modele de carte-->
+<div class="card">
+    <div class="card-content">
+        <div class="card-header-icon">
+        <i *ngIf="icon" class="fas fa-{{ icon }}"></i>
+        </div>
+    </div>
+    <div class="title">
+        <h1>{{ title }}</h1>
+    </div>
+    <div class="card-content has-text-centered">
+        <ng-content></ng-content>
+    </div>
 </div>
-
-

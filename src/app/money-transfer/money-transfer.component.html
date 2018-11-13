@@ -1,0 +1,49 @@
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <form>
+                    <div class="field">
+                        <div class="control">
+                            <input [(ngModel)]="transfer.name" class="input" type="text" placeholder="Votre nom" name="name">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <input [(ngModel)]="transfer.email" class="input" type="email" placeholder="Votre email" name="email">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <input [(ngModel)]="transfer.secretQuestion" class="input" type="text" name="secret-question"
+                                   placeholder="Votre question secrete">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <input [(ngModel)]="transfer.password" class="input" type="password" name="password"
+                                   placeholder="Votre password">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <input [(ngModel)]="transfer.amount" class="input" type="number" name="amount"
+                                   placeholder="Indiquer le montant a déposer">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <input [(ngModel)]="transfer.phone" class="input" type="tel" name="phone"
+                                   placeholder="Votre num.téléphone">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="column">
+                <div class="confirmation-container">
+                    <span>{{transfer.name}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
