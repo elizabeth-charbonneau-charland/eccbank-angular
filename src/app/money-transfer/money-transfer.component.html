@@ -5,7 +5,7 @@
                 <form>
                     <div class="field">
                         <div class="control">
-                            <input [(ngModel)]="transfer.name" class="input" type="text" placeholder="Votre nom" name="name">
+                            <input [(ngModel)]="transfer.nom" class="input" type="text" placeholder="Nom" name="name">
                         </div>
                     </div>
                     <div class="field">
@@ -15,7 +15,7 @@
                     </div>
                     <div class="field">
                         <div class="control">
-                            <input [(ngModel)]="transfer.secretQuestion" class="input" type="text" name="secret-question"
+                            <input [(ngModel)]="transfer.question" class="input" type="text" name="secret-question"
                                    placeholder="Votre question secrete">
                         </div>
                     </div>
@@ -27,13 +27,13 @@
                     </div>
                     <div class="field">
                         <div class="control">
-                            <input [(ngModel)]="transfer.amount" class="input" type="number" name="amount"
+                            <input [(ngModel)]="transfer.montant" class="input" type="number" name="amount"
                                    placeholder="Indiquer le montant a déposer">
                         </div>
                     </div>
                     <div class="field">
                         <div class="control">
-                            <input [(ngModel)]="transfer.phone" class="input" type="tel" name="phone"
+                            <input [(ngModel)]="transfer.tel" class="input" type="tel" name="phone"
                                    placeholder="Votre num.téléphone">
                         </div>
                     </div>
@@ -41,7 +41,7 @@
             </div>
             <div class="column">
                 <div class="confirmation-container">
-                    <span>{{transfer.name}}</span>
+                  <app-bank-list></app-bank-list>
                 </div>
             </div>
         </div>

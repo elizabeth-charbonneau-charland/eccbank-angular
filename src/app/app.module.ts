@@ -13,7 +13,7 @@ import {SignInComponent} from './sign-in/sign-in.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatStepperModule} from '@angular/material';
 import {FormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CarouselDirective } from './carousel.directive';
 import { SlideDirective } from './slide.directive';
 import { ContactComponent } from './contact/contact.component';
@@ -22,6 +22,8 @@ import { AccountComponent } from './account/account.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { AccountListComponent } from './account/account-list/account-list.component';
 import { MoneyTransferComponent } from './money-transfer/money-transfer.component';
+import { BankListComponent } from './bank-list/bank-list.component';
+
 
 @NgModule({
     declarations: [
@@ -40,7 +42,8 @@ import { MoneyTransferComponent } from './money-transfer/money-transfer.componen
         AccountComponent,
         CreateAccountComponent,
         AccountListComponent,
-        MoneyTransferComponent
+        MoneyTransferComponent,
+        BankListComponent
     ],
     imports: [
         BrowserModule,
@@ -50,7 +53,9 @@ import { MoneyTransferComponent } from './money-transfer/money-transfer.componen
         FormsModule,
         HttpClientModule
     ],
-    providers: [],
+    providers: [
+
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

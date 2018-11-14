@@ -1,8 +1,8 @@
 export class Transfer {
-    name: string;
+    nom: string;
     email: string;
-    secretQuestion: string;
+    question: string;
     password: string;
-    amount: number;
-    phone: number;
+    montant: number;
+    tel: number;
 }
