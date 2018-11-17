@@ -22,7 +22,8 @@ import { AccountComponent } from './account/account.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { AccountListComponent } from './account/account-list/account-list.component';
 import { MoneyTransferComponent } from './money-transfer/money-transfer.component';
-import { BankListComponent } from './bank-list/bank-list.component';
+import { AccountProviderComponent } from './account-provider/account-provider.component';
+
 
 
 @NgModule({
@@ -43,7 +44,7 @@ import { BankListComponent } from './bank-list/bank-list.component';
         CreateAccountComponent,
         AccountListComponent,
         MoneyTransferComponent,
-        BankListComponent
+        AccountProviderComponent,
     ],
     imports: [
         BrowserModule,

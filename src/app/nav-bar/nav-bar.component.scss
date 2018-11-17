@@ -2,29 +2,29 @@
 
 nav {
   font-size: 0.9rem;
-  background: linear-gradient(to right, #5E57EA, #814DE0);
+  background: url("../../assets/header-img.svg");
 
   .navbar-brand img {
-    margin: 15px 15px 15px 100px;
-    width: 80px;
-    height: 80px;
+    position: relative;
+    left: 100px;
+    width: 100px;
+    height: 100px;
   }
 
   .navbar-menu {
-    margin-top: 5px;
-    margin-right: 50px;
     margin-left: auto;
     flex-grow: 0;
   }
 
   .navbar-item {
-    padding: 13px;
+    font-weight: $weight-medium;
+    padding: 10px;
     margin: 25px;
-    color: white;
+    color: $secondary-color;
 
     &:hover {
       background-color: transparent;
-      color: $secondary-color;
+      text-decoration: line-through;
     }
   }
 
@@ -36,6 +36,7 @@ nav {
       background-color: $secondary-color;
       color: white;
       transition: 0.5s ease;
+      text-decoration: none;
     }
   }
 

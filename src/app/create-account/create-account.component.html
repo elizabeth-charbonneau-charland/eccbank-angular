@@ -1,6 +1,15 @@
+<nav>
+    <ul>
+        <li><a routerLink="/créeCompte">Crée</a></li>
+        <li><a routerLink="/virer">Virer</a></li>
+        <li><a routerLink="/payer">Payer</a></li>
+        <li><a>Plus</a></li>
+    </ul>
+</nav>
+
 <section class="section">
-    <div class="container">
-        <h1>Ouvrez un compte et profité de nos avantages !</h1>
+    <div class="container wrapper">
+        <h1 class="has-text-centered">Ouvrez un compte et profité de nos avantages !</h1>
         <h2>Type de compte :</h2>
         <div class="control">
             <label class="radio">
@@ -12,9 +21,9 @@
                 Épargne
             </label>
         </div>
-        <h2>nom du compte :</h2>
+        <h2>Nom du compte :</h2>
         <div class="control">
-            <input [(ngModel)]="name" class="input" type="text" placeholder="Écriver votre montant">
+            <input id="name" [(ngModel)]="name" required minlength="1" class="input" type="text" placeholder="Écriver le nom désiré de votre nouveau compte">
         </div>
         <h2>Montant à déposer :</h2>
         <div class="control">

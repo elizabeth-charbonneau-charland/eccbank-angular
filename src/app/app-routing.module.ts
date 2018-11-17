@@ -9,6 +9,7 @@ import {ProductComponent} from './product/product.component';
 import {CreateAccountComponent} from './create-account/create-account.component';
 import {AccountListComponent} from './account/account-list/account-list.component';
 import { MoneyTransferComponent } from './money-transfer/money-transfer.component';
+import { AccountProviderComponent } from './account-provider/account-provider.component';
 
 const routes: Route[] = [
   {path: '', pathMatch: 'full', redirectTo: ' accueil '},
@@ -19,7 +20,8 @@ const routes: Route[] = [
     {path: 'contact', component: ContactComponent},
     {path: 'compte', component: AccountListComponent},
     {path: 'créeCompte', component: CreateAccountComponent},
-    {path: 'virer', component: MoneyTransferComponent}
+    {path: 'virer', component: MoneyTransferComponent},
+    {path: 'payer', component: AccountProviderComponent}
 ];
 
 @NgModule({

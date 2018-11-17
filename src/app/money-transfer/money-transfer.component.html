@@ -1,5 +1,15 @@
+<nav>
+    <ul>
+        <li><a routerLink="/créeCompte">Crée</a></li>
+        <li><a routerLink="/virer">Transfert</a></li>
+        <li><a routerLink="/payer">Payer</a></li>
+        <li><a>Plus</a></li>
+    </ul>
+</nav>
+
 <section class="section">
-    <div class="container">
+    <div class="container wrapper">
+        <h1 class="has-text-centered">Faite votre transfert en toute sécurité</h1>
         <div class="columns">
             <div class="column">
                 <form>
@@ -37,11 +47,11 @@
                                    placeholder="Votre num.téléphone">
                         </div>
                     </div>
+                    <button class="button" (click)="sendTransfer()">Envoyé le transfert</button>
                 </form>
             </div>
             <div class="column">
                 <div class="confirmation-container">
-                  <app-bank-list></app-bank-list>
                 </div>
             </div>
         </div>

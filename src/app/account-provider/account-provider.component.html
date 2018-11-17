@@ -1,0 +1,25 @@
+<nav>
+  <ul>
+    <li><a routerLink="/créeCompte">Crée</a></li>
+    <li><a routerLink="/virer">Transfert</a></li>
+    <li><a routerLink="/payer">Payer</a></li>
+    <li><a>Plus</a></li>
+  </ul>
+</nav>
+
+<section class="section">
+  <div class="container wrapper">
+    <h1 class="has-text-centered">Effectuer un paiement</h1>
+      <div class="columns">
+          <div class="column is-full">
+              <ul>
+                  <li  *ngFor="let provider of providers | async">{{ provider}}</li>
+              </ul>
+
+          </div>
+          <div class="column">
+
+          </div>
+      </div>
+  </div>
+</section>

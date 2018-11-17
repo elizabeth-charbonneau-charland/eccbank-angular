@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Transfer} from '../transfer';
+import { TransferService } from '../transfer.service';
 
 @Component({
   selector: 'app-money-transfer',
@@ -9,9 +10,12 @@ import { Transfer} from '../transfer';
 export class MoneyTransferComponent implements OnInit {
     transfer = new Transfer();
 
-  constructor() { }
+  constructor(private transferService: TransferService) { }
 
   ngOnInit() {
+  }
+  sendTransfer() {
+    this.transferService.sendTransfer(this.transfer).subscribe(console.log);
   }
 
 }

@@ -1,13 +1,19 @@
 @import "../../variables";
 
 .single-account {
-  border: 1px solid gray;
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  background-color: white;
+  margin: 10px;
+  box-shadow: 1px 1px 1px 1px lightgray;
 
   .first-line {
-    font-weight: 600;
+    font-weight: bolder;
+
     i {
+      color: $secondary-color;
       font-size: $size-4;
-      padding: 5px;
+      padding: 10px;
     }
   }
 
@@ -16,6 +22,7 @@
   }
 
   .account-money {
+    margin-right: 20px;
     float: right;
   }
 }
