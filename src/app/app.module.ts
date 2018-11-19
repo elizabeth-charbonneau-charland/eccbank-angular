@@ -23,6 +23,9 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { AccountListComponent } from './account/account-list/account-list.component';
 import { MoneyTransferComponent } from './money-transfer/money-transfer.component';
 import { AccountProviderComponent } from './account-provider/account-provider.component';
+import { AccountNavbarComponent } from './account-navbar/account-navbar.component';
+import { MessagePopupComponent } from './message-popup/message-popup.component';
+import { AccountInformationsComponent } from './account/account-informations/account-informations.component';
 
 
 
@@ -45,6 +48,9 @@ import { AccountProviderComponent } from './account-provider/account-provider.co
         AccountListComponent,
         MoneyTransferComponent,
         AccountProviderComponent,
+        AccountNavbarComponent,
+        MessagePopupComponent,
+        AccountInformationsComponent,
     ],
     imports: [
         BrowserModule,

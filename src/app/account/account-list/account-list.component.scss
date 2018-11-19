@@ -1,32 +1,10 @@
 @import "../../../variables";
 
-nav {
-  margin-left: 20%;
-  margin-right: 20%;
-  background-color: #f2f2f2;
-  border-radius: 10px;
-
-  ul {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-    font-size: 1.4rem;
-    font-weight: 500;
-  }
-  a {
-    color: $secondary-color;
-
-    &:hover {
-      text-decoration: line-through;
-    }
-  }
-}
-
 .wrapper {
   border-radius: 10px;
   border: 2px solid lightgray;
-  background-color:#f2f2f2;
-  max-width: 75% ;
+  background: url("../../../assets/stripes-light.png");
+  max-width: 75%;
   padding: 20px;
 }
 
@@ -35,9 +13,9 @@ nav {
   margin-right: auto;
   margin-left: auto;
 
-   h1 {
-     font-size: $size-4;
-    padding: 20px;
+  h1 {
+    font-size: $size-3;
+    padding: 15px;
     color: $secondary-color;
   }
 }

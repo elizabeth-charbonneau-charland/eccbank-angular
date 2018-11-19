@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import {UserService} from '../user.service';
+import { UserService } from '../user.service';
 
 @Component({
-  selector: 'app-sign-in',
-  templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.scss']
+    selector: 'app-sign-in',
+    templateUrl: './sign-in.component.html',
+    styleUrls: ['./sign-in.component.scss'],
 })
 export class SignInComponent implements OnInit {
     email: string;
     password: string;
 
-  constructor(private userService: UserService) { }
+    constructor(private userService: UserService) {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
     onSubmit() {
         this.userService.signIn(this.email, this.password).subscribe();

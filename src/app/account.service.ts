@@ -4,6 +4,7 @@ import { Account } from './account';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
+import { Transaction } from './transaction';
 
 
 @Injectable({
@@ -12,9 +13,7 @@ import { environment } from '../environments/environment';
 export class AccountService {
 
     constructor(private httpClient: HttpClient) {
-
     }
-
 
     create(account: Account) {
         return this.httpClient.post(environment.url + 'create-account.php', {
@@ -28,8 +27,12 @@ export class AccountService {
         return this.httpClient.get<any[]>(environment.url + 'get-account.php', {withCredentials: true}).pipe(
             map(accounts => accounts.map(account => ({
                 ...account,
-                money: account.amount
-            })))
+                money: account.amount,
+            }))),
         );
+    }
+
+    getTransaction(account: number): Observable<Transaction[]> {
+        return this.httpClient.get<any[]>(`${environment.url}get-transaction.php?account=${account}`, {withCredentials: true});
     }
 }

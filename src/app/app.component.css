@@ -3,3 +3,9 @@ app-footer {
     bottom: 0;
     width: 100%;
 }
+
+app-message-popup {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+}

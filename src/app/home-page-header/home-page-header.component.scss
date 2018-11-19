@@ -2,7 +2,7 @@
 @import "~bulma/sass/utilities/mixins";
 
 .header {
-  top:0;
+  top: 0;
   width: 100%;
   position: absolute;
   height: inherit;
@@ -15,7 +15,7 @@
       left: 15%;
       font-size: 7.5rem;
       position: absolute;
-      top:35%;
+      top: 35%;
       color: white;
     }
 
@@ -23,13 +23,13 @@
       left: 25%;
       font-size: 1.3rem;
       position: absolute;
-      top:52%;
+      top: 52%;
       color: white;
     }
 
     img {
       position: absolute;
-      top:35%;
+      top: 35%;
       right: 5%;
       width: 700px;
       height: 750px;
