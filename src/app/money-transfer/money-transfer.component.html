@@ -3,50 +3,42 @@
 <section class="section">
     <div class="container wrapper">
         <h1 class="has-text-centered">Faite votre transfert en toute sécurité</h1>
-        <div class="columns">
-            <div class="column">
                 <form>
                     <div class="field">
                         <div class="control">
-                            <input [(ngModel)]="transfer.nom" class="input" type="text" placeholder="Nom" name="name">
+                            <input [(ngModel)]="transfer.nom" class="input is-rounded is-primary" type="text" placeholder="Nom" name="name">
                         </div>
                     </div>
                     <div class="field">
                         <div class="control">
-                            <input [(ngModel)]="transfer.email" class="input" type="email" placeholder="Votre email" name="email">
+                            <input [(ngModel)]="transfer.email" class="input is-rounded is-primary" type="email" placeholder="Votre email" name="email">
                         </div>
                     </div>
                     <div class="field">
                         <div class="control">
-                            <input [(ngModel)]="transfer.question" class="input" type="text" name="secret-question"
+                            <input [(ngModel)]="transfer.question" class="input is-rounded is-primary" type="text" name="secret-question"
                                    placeholder="Votre question secrete">
                         </div>
                     </div>
                     <div class="field">
                         <div class="control">
-                            <input [(ngModel)]="transfer.password" class="input" type="password" name="password"
+                            <input [(ngModel)]="transfer.password" class="input is-rounded is-primary" type="password" name="password"
                                    placeholder="Votre password">
                         </div>
                     </div>
                     <div class="field">
                         <div class="control">
-                            <input [(ngModel)]="transfer.montant" class="input" type="number" name="amount"
+                            <input [(ngModel)]="transfer.montant" class="input is-rounded is-primary" type="number" name="amount"
                                    placeholder="Indiquer le montant a déposer">
                         </div>
                     </div>
                     <div class="field">
                         <div class="control">
-                            <input [(ngModel)]="transfer.tel" class="input" type="tel" name="phone"
+                            <input [(ngModel)]="transfer.tel" class="input is-rounded is-primary" type="tel" name="phone"
                                    placeholder="Votre num.téléphone">
                         </div>
                     </div>
-                    <button class="button" (click)="sendTransfer()">Envoyé le transfert</button>
+                    <button (click)="sendTransfer()">Envoyé le transfert</button>
                 </form>
-            </div>
-            <div class="column">
-                <div class="confirmation-container">
-                </div>
-            </div>
         </div>
-    </div>
 </section>

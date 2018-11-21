@@ -13,6 +13,7 @@ export class SignUpComponent implements OnInit {
     password: string;
     firstName: string;
     lastName: string;
+    submitted = false;
 
     constructor(private userService: UserService) {
     }
@@ -22,5 +23,6 @@ export class SignUpComponent implements OnInit {
 
     onSubmit() {
         this.userService.signUp(this.email, this.password, this.firstName, this.lastName).subscribe();
+         this.submitted = true;
     }
 }

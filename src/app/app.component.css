@@ -6,6 +6,6 @@ app-footer {
 
 app-message-popup {
     position: absolute;
-    top: 30%;
+    top: 30vh;
     left: 35%;
 }

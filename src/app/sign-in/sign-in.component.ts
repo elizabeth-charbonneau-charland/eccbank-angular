@@ -9,14 +9,15 @@ import { UserService } from '../user.service';
 export class SignInComponent implements OnInit {
     email: string;
     password: string;
+    submitted = false;
 
     constructor(private userService: UserService) {
     }
 
     ngOnInit() {
     }
-
     onSubmit() {
         this.userService.signIn(this.email, this.password).subscribe();
+        this.submitted = true;
     }
 }

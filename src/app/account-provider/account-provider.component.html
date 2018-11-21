@@ -1,7 +1,7 @@
 <app-account-navbar></app-account-navbar>
 <section class="section">
     <div class="container wrapper">
-        <h1 class="has-text-centered">Effectuer un paiement</h1>
+        <h1 class="has-text-centered">EFFECTUEZ UN PAIEMENT</h1>
         <h2 class="has-text-centered">Choisir le fournisseur</h2>
         <div class="provider-list">
         <a [ngClass]="{selected: provider === selectedProvider}"
@@ -11,14 +11,13 @@
             {{ provider}}
         </a>
         </div>
-
         <br>
-
         <input [(ngModel)]="amount"
-               class="input"
+               class="input is-rounded is-primary"
                type="number"
                name="amount"
-               placeholder="Indiquer le montant a déposer">
-        <button (click)="payBills()">ENVOYER</button>
+               placeholder="Indiquer le montant a payer">
+        <br>
+        <button (click)="payBills()">Payer ma facture</button>
     </div>
 </section>

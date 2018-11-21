@@ -1,14 +1,17 @@
 @import "../../variables";
-@import "~bulma/bulma";
+
 
 .card {
-  border-radius: 24px 24px 24px 0;
-  border: 2px solid ghostwhite;
-  padding: 20px;
+  cursor: pointer;
+  border: $border-color;
+  padding: 40px;
+  border-radius: $special-border-radius;
+  transition-duration: 700ms;
+  margin: 20px;
 
   i {
     color: $secondary-color;
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
 
   h1 {
@@ -23,3 +26,9 @@
   }
 }
 
+.card-content {
+  padding: 5px;
+  color: $text-color;
+  font-weight: $weight-medium;
+
+}

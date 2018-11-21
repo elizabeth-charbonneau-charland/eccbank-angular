@@ -1,23 +1,22 @@
-<nav class="navbar">
+<nav class="navbar" [class.is-home-page]="isHomePage | async">
     <div class="navbar-brand">
-        <img src="../../assets/cloudsvg.svg" alt="">
+        <a href="#"><img src="../../assets/cloudsvg.svg" alt="logo nuage"></a>
         <a (click)="menuIsOpen = !menuIsOpen" class="navbar-burger">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
         </a>
     </div>
-
     <div [class.is-active]="menuIsOpen" class="navbar-menu is-active">
+        <div class="navbar-start">
         <a class="navbar-item" routerLink="accueil">
             ACCUEIL
         </a>
-        <a class="navbar-item" routerLink="/produit">
-            SERVICES BANCAIRES
-        </a>.
         <a class="navbar-item" routerLink="/contact">
             CONTACT
         </a>
+        </div>
+        <div class="navbar-end">
         <ng-container *ngIf="!loggedIn; else loggedInInfo">
             <a class="navbar-item special-border" routerLink="/inscription">
                 INSCRIPTION
@@ -34,5 +33,6 @@
                 <i class="fas fa-power-off"></i>
             </a>
         </ng-template>
+        </div>
     </div>
 </nav>

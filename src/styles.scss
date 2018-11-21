@@ -6,10 +6,25 @@
 
 body {
   font-family: Quicksand;
-  margin-bottom: $footer-height;
 }
 
 html {
   position: relative;
   min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 45px;
+  border-color: #fb397d;
+  padding: 10px;
+  color: $secondary-color;
+  background-color: white;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: white;
+    transition: 0.3s ease;
+    text-decoration: none;
+  }
 }

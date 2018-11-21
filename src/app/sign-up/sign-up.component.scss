@@ -3,18 +3,16 @@
 .subscribe-form {
   margin-top: 100px;
 
-  a {
-    color: $secondary-color;
-  }
 }
 
-
 .subscribe-image {
-
-
   h1 {
     font-size: $size-3;
     color: $primary-color;
     font-weight: $weight-medium;
   }
+}
+
+.field a {
+  color: $secondary-color;
 }

@@ -2,66 +2,96 @@
 
 app-home-page-header {
   display: block;
-  height: 850px;
+  height: 800px;
 }
 
 .card-section {
 
   .single-card {
-    margin: 10px;
+    margin: 5px;
+
   }
 
   h1 {
     margin-bottom: 50px;
-    font-size: $size-2;
+    font-size: $size-1;
     color: $primary-color;
-    font-weight: $weight-medium;
+    font-weight: 500;
   }
 }
 
-
 .advantage-section {
 
+  .column {
+    padding: 20px;
+  }
 
   h1 {
-    font-size: $size-2;
     color: $primary-color;
     font-weight: $weight-medium;
-    margin-bottom: 20px;
+    font-size: $size-1;
+    margin-bottom: 15px;
   }
 
   p {
+    color: $text-color;
+    width: 40rem;
     line-height: 2rem;
 
   }
 }
 
 .reviews {
-  background-color: $background-color;
+  background-color: #fafafa;
 
   i.fa-quote-left {
-    padding: 2.5rem;
-    font-size: 3rem;
-    color: #882cd6;
+    font-size: 48px;
+    color: #897ceb;
+    margin-bottom: 30px;
   }
 
   p {
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1.2rem;
-    text-align: center;
-    max-width: 50rem;
+    color: $text-color;
+    font-size: $size-5;
+    margin-bottom: 15px;
+  }
   }
 
   h2 {
     font-size: 1.2rem;
     padding: 10px;
-    color: #fb397d;
+    color: $primary-color;
+    font-weight: $weight-bold;
   }
 
   .fa-star {
-    margin-top: 10px;
-    color: #882cd6;
+    font-size: 18px;
+    color: #f1b922;
   }
 
-}
+  .chevron-right {
+    cursor: pointer;
+    font-size: 30px;
+    position: absolute;
+    top: 85px;
+    right: 10px;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  .chevron-left {
+    cursor: pointer;
+    font-size: 30px;
+    position: absolute;
+    top: 85px;
+    left: 10px;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+
+

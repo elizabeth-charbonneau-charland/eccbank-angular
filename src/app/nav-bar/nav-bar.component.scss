@@ -1,30 +1,23 @@
 @import "../../variables";
 
 nav {
-  font-size: 0.9rem;
-  background: url("../../assets/header-img.svg");
+
+  &.is-home-page {
+    background: url("../../assets/header-img.svg");
+  }
 
   .navbar-brand img {
     position: relative;
-    left: 100px;
+    left: 3rem;
     width: 100px;
     height: 100px;
   }
 
   .navbar-menu {
-    margin-left: auto;
-    flex-grow: 0;
-  }
+    font-size: 1rem;
 
-  .navbar-item {
-    font-weight: $weight-medium;
-    padding: 10px;
-    margin: 25px;
-    color: $secondary-color;
-
-    &:hover {
-      background-color: transparent;
-      text-decoration: line-through;
+    .navbar-start {
+      margin-left: 2rem;
     }
   }
 
@@ -40,6 +33,7 @@ nav {
     }
   }
 
+  //HAMBURGER NAV
   .is-active {
     background-color: whitesmoke;
     color: $primary-color;
@@ -53,8 +47,16 @@ nav {
       color: $primary-color;
       margin: 10px;
     }
-
   }
-
 }
 
+.navbar-item {
+  font-weight: $weight-bold;
+  margin: 1.5rem;
+  color: #fb397d;
+
+  .is-home-page & {
+    color: white;
+    background-color: transparent;
+  }
+}
