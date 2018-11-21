@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Transfer} from '../transfer';
 import { TransferService } from '../transfer.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from '../message.service';
 
 @Component({
@@ -12,7 +12,8 @@ import { MessageService } from '../message.service';
 export class MoneyTransferComponent implements OnInit {
     transfer = new Transfer();
 
-  constructor(private transferService: TransferService, private messageService: MessageService, private activedRoute: ActivatedRoute) { }
+  constructor(private transferService: TransferService, private messageService: MessageService, private activedRoute: ActivatedRoute, private router: Router) {
+  }
 
   ngOnInit() {
     this.activedRoute.snapshot.paramMap.get('sourceAccount');
@@ -21,8 +22,8 @@ export class MoneyTransferComponent implements OnInit {
     this.transfer.compte = Number(this.activedRoute.snapshot.paramMap.get('sourceAccount'));
     this.transferService.sendTransfer(this.transfer).subscribe(
         response => this.messageService.showMessage('success', 'Votre transfert a été effectué avec succes !'),
-        error => this.messageService.showMessage('error', 'Oups, une erreur cest produite, veuillez reesayer de nouveau !')
+        error => this.messageService.showMessage('error', 'Oups, une erreur cest produite, veuillez reesayer de nouveau !'),
+        () => this.router.navigate(['/compte'])
     );
   }
-
 }

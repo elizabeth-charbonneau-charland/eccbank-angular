@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BillService } from '../bill.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from '../message.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class AccountProviderComponent implements OnInit {
     amount: number;
     selectedProvider: string;
 
-    constructor(private providersService: BillService, private activedRoute: ActivatedRoute, private messageService: MessageService) {
+    constructor(private providersService: BillService, private activedRoute: ActivatedRoute, private messageService: MessageService, private router: Router) {
         this.providers = this.providersService.getProvidersList();
     }
 
@@ -23,10 +23,11 @@ export class AccountProviderComponent implements OnInit {
     }
 
     payBills() {
-        const account  = Number(this.activedRoute.snapshot.paramMap.get('sourceAccount'));
+        const account = Number(this.activedRoute.snapshot.paramMap.get('sourceAccount'));
         this.providersService.payBills(account, this.selectedProvider, this.amount).subscribe(
             response => this.messageService.showMessage('success', 'Votre transfert a été effectué avec succes !'),
-            error => this.messageService.showMessage('error', 'Oups, une erreur cest produite, veuillez reesayer de nouveau !')
+            error => this.messageService.showMessage('error', 'Oups, une erreur cest produite, veuillez reesayer de nouveau !'),
+            () => this.router.navigate(['/compte']),
         );
     }
 
