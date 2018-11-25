@@ -1,0 +1,29 @@
+<app-account-navbar></app-account-navbar>
+
+<section class="section">
+    <div class="container wrapper">
+        <h1 class="has-text-centered">Ouvrez un compte et profité de nos avantages !</h1>
+        <h2>Type de compte :</h2>
+        <div class="control">
+            <label class="radio">
+                <input [(ngModel)]="type" value="checking" type="radio">
+                Chèques
+            </label>
+            <label class="radio">
+                <input [(ngModel)]="type" value="savings" type="radio">
+                Épargne
+            </label>
+        </div>
+        <h2>Nom du compte :</h2>
+        <div class="control">
+            <input id="name" [(ngModel)]="name" required minlength="1" class="input" type="text" placeholder="Écriver le nom désiré de votre nouveau compte">
+        </div>
+        <h2>Montant à déposer :</h2>
+        <div class="control">
+            <input [(ngModel)]="money" class="input" type="number" placeholder="Écriver votre montant">
+        </div>
+        <div class="control">
+            <button class="button" (click)="create()">Crée mon compte</button>
+        </div>
+    </div>
+</section>

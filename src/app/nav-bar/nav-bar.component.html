@@ -1,32 +1,38 @@
-
-<nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="#">
-    <img src="assets/logonouveau.png" width="150" height="90" alt="">
-  </a>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
-      </li>
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-           aria-haspopup="true" aria-expanded="false">
-          Dropdown
+<nav class="navbar" [class.is-home-page]="isHomePage | async">
+    <div class="navbar-brand">
+        <a href="#"><img src="../../assets/cloudsvg.svg" alt="logo nuage"></a>
+        <a (click)="menuIsOpen = !menuIsOpen" class="navbar-burger">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+    <div [class.is-active]="menuIsOpen" class="navbar-menu is-active">
+        <div class="navbar-start">
+        <a class="navbar-item" routerLink="accueil">
+            ACCUEIL
+        </a>
+        <a class="navbar-item" routerLink="/contact">
+            CONTACT
+        </a>
         </div>
-      </li>
-
-    </ul>
-    <form>
-     <button class="btn btn-outline-primary m-2" type="submit" routerLink="devenir-client">Devenir client</button>
-      <button class="btn btn-outline-primary m-2" type="submit" routerLink="acces-client">Accès client</button>
-    </form>
-  </div>
+        <div class="navbar-end">
+        <ng-container *ngIf="!loggedIn; else loggedInInfo">
+            <a class="navbar-item special-border" routerLink="/inscription">
+                INSCRIPTION
+            </a>
+            <a class="navbar-item special-border" routerLink="/connexion">
+                CONNEXION
+            </a>
+        </ng-container>
+        <ng-template #loggedInInfo>
+            <a class="navbar-item special-border" routerLink="/compte">
+                Mon Compte
+            </a>
+            <a class="navbar-item special-border" (click)="logout()">
+                <i class="fas fa-power-off"></i>
+            </a>
+        </ng-template>
+        </div>
+    </div>
 </nav>

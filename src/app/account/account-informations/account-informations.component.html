@@ -1,0 +1,46 @@
+<app-account-navbar></app-account-navbar>
+<section class="section">
+    <div class="container wrapper">
+        <h1 class="has-text-centered">Historique de votre compte</h1>
+        <div class="single-account">
+            <span class="first-line">
+                <ng-container [ngSwitch]="account.type">
+                    <i *ngSwitchCase="'checking'" class="fas fa-wallet"></i>
+                    <i *ngSwitchCase="'savings'" class="fas fa-piggy-bank"></i>
+                </ng-container>
+            </span>
+            <span>{{ account.id }}</span>
+            <br>
+            <span class="account-name">
+                {{ account.name }}
+            </span>
+            <span class="account-money">
+                {{account.money | currency }}
+            </span>
+        </div>
+
+        <div class="single-account" *ngFor="let transaction of transactions | async">
+            <span class="first-line">
+                <ng-container [ngSwitch]="account.type">
+                    <i *ngSwitchCase="'checking'" class="fas fa-wallet"></i>
+                    <i *ngSwitchCase="'savings'" class="fas fa-piggy-bank"></i>
+                </ng-container>
+            </span>
+            <span>{{ account.id }}</span>
+            <br>
+            <span class="account-name">
+                    {{ account.name }}
+            </span>
+            <span class="account-money-transaction">
+                    {{transaction.amount}}
+            </span>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+

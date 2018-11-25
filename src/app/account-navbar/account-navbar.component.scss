@@ -1,0 +1,19 @@
+@import "../../variables";
+
+nav {
+  border-radius: 10px;
+  border: 2px solid lightgray;
+  background: url("../../assets/stripes-light.png");
+  padding: 10px;
+  font-weight: $weight-bold;
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+    font-size: 1.4rem;
+  }
+  a {
+    color: $secondary-color;
+  }
+}
