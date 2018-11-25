@@ -1,13 +1,33 @@
-<form>
-  <div class="form-group">
-    <h1>Accès à votre compte </h1>
-    <br>
-    <label for="email">Adresse courriel</label>
-    <input type="email" class="form-control" id="email"  placeholder="Adresse Courriel">
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-two-fifths subscribe-form">
+        <div class="field">
+          <div class="control has-icons-left has-icons-right">
+            <input [(ngModel)]="email" class="input is-rounded is-primary" type="email" placeholder="Adresse e-mail">
+            <span class="icon is-small is-left">
+                     <i class="fas fa-envelope"></i>
+                     </span>
+          </div>
+        </div>
+        <div class="field">
+          <p class="control has-icons-left">
+            <input [(ngModel)]="password" class="input is-rounded is-primary" type="password" placeholder="Mot de passe">
+            <span class="icon is-small is-left">
+                     <i class="fas fa-lock"></i>
+                     </span>
+          </p>
+        </div>
+        <div class="field">
+          <div class="control">
+            <button (click)="onSubmit()">Connexion</button>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <h1 class="has-text-centered">Connexion à votre compte</h1>
+        <img src="../../assets/office.svg" alt="image bureau">
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="password">Mot de passe</label>
-    <input type="password" class="form-control" id="password" placeholder="Mot de passe">
-  </div>
-  <button type="submit" class="btn btn-primary">Connexion</button>
-</form>
+</div>

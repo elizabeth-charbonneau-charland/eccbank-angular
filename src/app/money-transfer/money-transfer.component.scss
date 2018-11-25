@@ -1,0 +1,21 @@
+@import "../../variables";
+
+.wrapper {
+  border-radius: 10px;
+  border: 2px solid lightgray;
+  background: url("../../assets/stripes-light.png");
+  padding: 20px;
+}
+
+h1 {
+  margin: 10px;
+  font-weight: $weight-bold;
+  font-size: $size-4;
+  color: $secondary-color;
+}
+
+form {
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+}

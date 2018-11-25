@@ -1,0 +1,20 @@
+<a (click)="navigateToAccountInfo()">
+    <div class="single-account">
+    <span class="first-line">
+        <ng-container [ngSwitch]="account.type">
+            <i *ngSwitchCase="'checking'" class="fas fa-wallet"></i>
+            <i *ngSwitchCase="'savings'" class="fas fa-piggy-bank"></i>
+        </ng-container>
+    </span>
+        <span>{{ account.id }}</span>
+        <span><button class="button is-outlined" (click)="navigateToTransfer()">Interax</button></span>
+        <span><button class="button is-outlined" (click)="navigateToPayBills()">Fournisseurs</button></span>
+        <br>
+        <span class="account-name">
+        {{ account.name }}
+    </span>
+        <span class="account-money">
+        {{account.money | currency }}
+    </span>
+    </div>
+</a>

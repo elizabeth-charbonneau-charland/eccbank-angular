@@ -1,1 +1,62 @@
+@import "../../variables";
 
+nav {
+
+  &.is-home-page {
+    background: url("../../assets/header-img.svg");
+  }
+
+  .navbar-brand img {
+    position: relative;
+    left: 3rem;
+    width: 100px;
+    height: 100px;
+  }
+
+  .navbar-menu {
+    font-size: 1rem;
+
+    .navbar-start {
+      margin-left: 2rem;
+    }
+  }
+
+  .special-border {
+    border-radius: 24px 24px 24px 0;
+    border: 2px solid #A865E1;
+
+    &:hover {
+      background-color: $secondary-color;
+      color: white;
+      transition: 0.5s ease;
+      text-decoration: none;
+    }
+  }
+
+  //HAMBURGER NAV
+  .is-active {
+    background-color: whitesmoke;
+    color: $primary-color;
+
+    display: inline-block;
+    float: right;
+    border-radius: 24px 24px 24px 0;
+    border: 2px solid $primary-color;
+
+    a {
+      color: $primary-color;
+      margin: 10px;
+    }
+  }
+}
+
+.navbar-item {
+  font-weight: $weight-bold;
+  margin: 1.5rem;
+  color: #fb397d;
+
+  .is-home-page & {
+    color: white;
+    background-color: transparent;
+  }
+}

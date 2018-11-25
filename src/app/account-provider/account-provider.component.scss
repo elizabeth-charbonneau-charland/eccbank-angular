@@ -1,0 +1,68 @@
+@import "../../variables";
+
+.wrapper {
+  border-radius: 10px;
+  border: 2px solid lightgray;
+  background: url("../../assets/stripes-light.png");
+  padding: 10px;
+}
+
+h1 {
+  margin-top: 10px;
+  font-weight: $weight-bold;
+  font-size: $size-4;
+  color: $secondary-color;
+}
+
+h2 {
+  font-size: $size-5;
+  margin-bottom: 20px;
+}
+
+.provider {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #f2f2f2;
+  background-color: white;
+  margin: 10px;
+  box-shadow: 1px 1px 1px 1px lightgray;
+  font-weight: $weight-bold;
+
+  &:hover {
+    background-color: $secondary-color;
+    transition: 0.6s ease;
+  }
+}
+
+.provider-list {
+  display: flex;
+  justify-content: center;
+
+  a {
+    color: $secondary-color;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  a.selected {
+    background-color: $secondary-color;
+    color: white;
+  }
+}
+
+.input {
+  width: 50%;
+  display: block;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+

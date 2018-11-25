@@ -1,0 +1,5 @@
+<div *ngIf="messages | async as message" class="notification"
+     [ngClass]="{'is-success': message.type === 'success', 'is-danger': message.type !== 'success'}">
+  <button class="delete" (click)="removeMessage()" ></button>
+ <p>{{message.text}}</p>
+</div>

@@ -1,6 +1,97 @@
-hr {
-  width: 50%;
-  height: 200px;
+@import "../../variables";
 
+app-home-page-header {
+  display: block;
+  height: 800px;
 }
+
+.card-section {
+
+  .single-card {
+    margin: 5px;
+
+  }
+
+  h1 {
+    margin-bottom: 50px;
+    font-size: $size-1;
+    color: $primary-color;
+    font-weight: 500;
+  }
+}
+
+.advantage-section {
+
+  .column {
+    padding: 20px;
+  }
+
+  h1 {
+    color: $primary-color;
+    font-weight: $weight-medium;
+    font-size: $size-1;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: $text-color;
+    width: 40rem;
+    line-height: 2rem;
+
+  }
+}
+
+.reviews {
+  background-color: #fafafa;
+
+  i.fa-quote-left {
+    font-size: 48px;
+    color: #897ceb;
+    margin-bottom: 30px;
+  }
+
+  p {
+    color: $text-color;
+    font-size: $size-5;
+    margin-bottom: 15px;
+  }
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    padding: 10px;
+    color: $primary-color;
+    font-weight: $weight-bold;
+  }
+
+  .fa-star {
+    font-size: 18px;
+    color: #f1b922;
+  }
+
+  .chevron-right {
+    cursor: pointer;
+    font-size: 30px;
+    position: absolute;
+    top: 85px;
+    right: 10px;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  .chevron-left {
+    cursor: pointer;
+    font-size: 30px;
+    position: absolute;
+    top: 85px;
+    left: 10px;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+
 

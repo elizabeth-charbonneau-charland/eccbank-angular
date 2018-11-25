@@ -1,0 +1,47 @@
+@import "../../../variables";
+
+.wrapper {
+  border-radius: 10px;
+  border: 2px solid lightgray;
+  background: url("../../../assets/stripes-light.png");
+  width: 70%;
+  padding: 20px;
+}
+
+h1 {
+  font-size: $size-4;
+  color: $secondary-color;
+}
+
+.single-account {
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  background-color: white;
+  margin: 10px;
+  box-shadow: 1px 1px 1px 1px lightgray;
+
+  .first-line {
+    font-weight: bolder;
+
+    i {
+      color: $secondary-color;
+      font-size: $size-4;
+      padding: 10px;
+    }
+  }
+
+  .account-name {
+    margin-left: 10px;
+  }
+
+  .account-money {
+    margin-right: 20px;
+    float: right;
+  }
+
+  .account-money-transaction {
+    margin-right: 20px;
+    float: right;
+    color: $secondary-color;
+  }
+}
